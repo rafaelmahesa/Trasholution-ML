@@ -6,6 +6,27 @@
 
 - For the main repository you can go to this [repository](https://github.com/ignatiusbarry69/ALL-TRASHOLUTION)
 
+## Directory in this repository
+
+```text
+Trasholution-ML
+├── ML-FastAPI-app
+│   ├── app
+│   │   ├── model
+│   │   │   ├── [PLACE THE MODEL IN THIS FOLDER]
+│   │   │   └── README.md
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   └── requirements.txt
+├── Training Notebooks
+│   ├── training_model_waste_classification_v2_1.ipynb
+│   └── training_model_waste_classification_v2_2.ipynb
+├── .gitignore
+└── README.md
+```
+
 ## Model Training
 
 ### Dataset
@@ -46,3 +67,10 @@
     - validation : 92.07%
     - testing : 92.06%
 - The model that is currently in use for deployment is the `model-waste_classification-v2_2.h5`.
+
+## Model Deployment
+
+- [`/ML-FastAPI-app/`](https://github.com/rafaelmahesa/Trasholution-ML/tree/main/ML-FastAPI-app) folder contains the web app FastAPI implementation for the model deployment in GCP Cloud Run.
+- [`/ML-FastAPI-app/model/`](https://github.com/rafaelmahesa/Trasholution-ML/tree/main/ML-FastAPI-app/app/model) folder contain the model for creating Docker Image. Due to Git file size limit at 100MB, you can download the exported model in the [`Exported Models`](https://github.com/rafaelmahesa/Trasholution-ML/tree/main#exported-models) section above.
+- The Docker Image for model deployment in Cloud Run can be found on [Docker Hub](https://hub.docker.com/repository/docker/rafaelmahesa/ml-waste-image/general).
+- Docker Image that is currently in deployment in GCP Cloud Run is the `latest` tag (`rafaelmahesa/ml-waste-image:latest`).
