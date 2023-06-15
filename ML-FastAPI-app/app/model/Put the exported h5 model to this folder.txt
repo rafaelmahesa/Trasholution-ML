@@ -1,0 +1,2 @@
+Put the exported h5 model to this folder.
+The Google Drive link for the exported model are provided in the repository README.
